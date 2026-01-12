@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: flask-plotly-visualizer
+    env: docker
+    repo: https://github.com/stick35em10/designing_forecasting_pipelines_for_production
+    branch: main
+    rootDir: flask_app
+    healthCheckPath: /
+    envVars:
+      - key: FLASK_APP
+        value: app.py
+      - key: FLASK_ENV
+        value: production
+    ports:
+      - port: 5001
+        protocol: TCP
