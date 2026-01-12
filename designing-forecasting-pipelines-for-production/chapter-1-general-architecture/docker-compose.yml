@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  script-runner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - ./.env
+    command: python ${SCRIPT_NAME}
+    volumes:
+      - ./output:/app/output
+  
+  webserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python app.py
+    volumes:
+      - ./output:/app/output
+    ports:
+      - "5000:5000"

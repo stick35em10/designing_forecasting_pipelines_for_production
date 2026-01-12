@@ -1,0 +1,10 @@
+lightgbm
+xgboost
+scikit-learn
+mlforecast
+utilsforecast
+pandas
+plotly
+Flask
+gunicorn
+matplotlib

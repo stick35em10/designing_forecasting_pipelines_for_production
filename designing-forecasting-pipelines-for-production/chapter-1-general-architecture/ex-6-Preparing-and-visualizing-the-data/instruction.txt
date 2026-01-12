@@ -1,0 +1,18 @@
+#https://campus.datacamp.com/courses/designing-forecasting-pipelines-for-production/general-architecture?ex=6
+Preparing and visualizing the data
+Accurate data preparation is key to building effective machine learning models. Now it's time to apply the skills you've learned.
+
+Your data needs three columns for the statsforecast library:
+
+unique_id: series ID
+ds: series timestamp
+y: series values
+Apply the necessary steps to clean and reformat your data for time series forecasting. The dataset has been preloaded as ts, and pandas is imported as pd.
+
+Instructions 1/3
+    Convert the "period" column to a datetime format and sort the DataFrame by "period" in ascending order.
+
+
+Instructions 2/3
+    Rename the "period" column to "ds" and the "value" column to "y".
+    Add a new column called "unique_id" and set its value to 1 (since you are working with a single time series).

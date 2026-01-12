@@ -1,0 +1,16 @@
+Forecasting with ML Models
+As a data science consultant, your task is to predict US hourly electricity demand. In the previous task, you cleaned and prepared the data. Now, it's time to use machine learning models to build your forecast.
+
+We previously covered the statsforecast workflow, and now you'll apply the same principles using mlforecast.
+
+The train and test datasets, as well as models (LGBMRegressor(), XGBRegressor(), LinearRegression()), are preloaded.
+
+The MLForecast class has been imported from the mlforecast package, ready to use. Let's build your forecast!
+
+Instructions 1/2
+Define the ML models using LGBMRegressor(), XGBRegressor(), and LinearRegression().
+Set up the MLForecast object and set the frequency to hourly ('h').
+
+Instructions 2/2
+Train the model using the fit() method with the train dataset and set the prediction horizon to 72 hours.
+Use the predict() method to generate forecasts with a 95% confidence level.
