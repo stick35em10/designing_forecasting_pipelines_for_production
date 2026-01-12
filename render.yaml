@@ -11,6 +11,3 @@ services:
         value: app.py
       - key: FLASK_ENV
         value: production
-    ports:
-      - port: 5001
-        protocol: TCP
