@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: flask-plotly-visualizer
+    env: docker
+    repo: https://github.com/your-username/your-repo-name # Replace with your GitHub repo URL
+    branch: main # Or your default branch
+    rootDir: ./designing-forecasting-pipelines-for-production/chapter-4-From-Deployment-to-Production/ex_7_model_drift/ex_9_Identifying_model_drift/flask_visualizer
+    healthCheckPath: /
+    envVars:
+      - key: FLASK_APP
+        value: app.py
+      - key: FLASK_ENV
+        value: production
+    ports:
+      - port: 5001
+        protocol: TCP
