@@ -6,6 +6,7 @@ services:
     branch: main
     rootDir: flask_app
     healthCheckPath: /
+    plan: free
     envVars:
       - key: FLASK_APP
         value: app.py
