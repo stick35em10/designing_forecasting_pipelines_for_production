@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - SCRIPT_NAME
+    command: sh -c "if [ -n "$SCRIPT_NAME" ]; then python "$SCRIPT_NAME"; else gunicorn --bind 0.0.0.0:5000 app:app; fi"

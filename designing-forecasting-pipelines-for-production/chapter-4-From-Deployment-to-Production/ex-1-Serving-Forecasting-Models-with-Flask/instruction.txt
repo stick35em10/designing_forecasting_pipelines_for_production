@@ -1,0 +1,38 @@
+# Exercise 1: Serving Forecasting Models with Flask
+
+In this exercise, you will learn how to serve a pre-trained forecasting model using a Flask application.
+
+## Steps:
+
+1.  **Understand the `script.py`:**
+    *   Review the provided `script.py` file. It sets up a Flask application that loads an MLflow model and exposes a `/predict` endpoint.
+    *   The `/predict` endpoint expects a JSON payload containing the features for prediction.
+
+2.  **Replace Placeholders:**
+    *   In `script.py`, replace `'runs:/your_run_id/your_model_path'` with the actual MLflow run ID and model path of a model you have previously trained and logged. You can find this information in your MLflow UI.
+
+3.  **Install Dependencies:**
+    *   Ensure you have the necessary dependencies installed. You can use the `requirements.txt` file provided in the chapter directory.
+    *   `pip install -r ../requirements.txt`
+
+4.  **Run the Flask Application:**
+    *   Navigate to the exercise directory: `cd chapter-4-From-Deployment-to-Production/ex-1-Serving-Forecasting-Models-with-Flask`
+    *   Run the Flask app: `python script.py`
+
+5.  **Test the Endpoint:**
+    *   Once the Flask app is running, you can test the `/predict` endpoint using `curl` or a tool like Postman.
+    *   Example `curl` command (replace `your_feature_name` and `your_feature_value` with actual data your model expects):
+
+        ```bash
+        curl -X POST -H "Content-Type: application/json" \
+             -d '{"your_feature_name": your_feature_value}' \
+             http://127.0.0.1:5000/predict
+        ```
+    *   Observe the prediction output from the model.
+
+## Objective:
+
+By the end of this exercise, you should be able to:
+*   Understand the basic structure of a Flask application for serving models.
+*   Load and use an MLflow-trained model within a Flask app.
+*   Successfully make predictions by sending data to the `/predict` endpoint.

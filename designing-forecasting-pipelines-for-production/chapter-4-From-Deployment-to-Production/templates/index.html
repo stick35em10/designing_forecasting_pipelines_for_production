@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+    <title>Plotly Chart</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Forecast Error Rate Over Time</h1>
+    <div id="chart"></div>
+    <script>
+        var graph = {{ graphJSON|safe }};
+        Plotly.newPlot('chart', graph.data, graph.layout);
+    </script>
+</body>
+</html>
