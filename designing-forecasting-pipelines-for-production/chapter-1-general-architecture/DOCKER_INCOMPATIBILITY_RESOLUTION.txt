@@ -1,7 +1,0 @@
-It seems there is a persistent incompatibility issue with your Docker setup that prevents docker-compose from running non-interactively.
-
-I recommend that you:
-1.  **Uninstall the manually installed docker-compose 1.29.2:** `sudo rm /usr/local/bin/docker-compose`
-2.  **Ensure your Docker CE installation is up-to-date:** Follow the official Docker documentation for your operating system to install or upgrade Docker Engine and Docker Compose (which is now usually part of Docker Desktop or installed as a plugin). This will ensure you have compatible versions of the Docker client, daemon, and compose.
-
-Once you have a fully functional and compatible Docker installation, please try running `docker-compose up` again. I cannot proceed until this underlying environment issue is resolved.
