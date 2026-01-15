@@ -1,0 +1,29 @@
+Fitting the model
+Now that your model and parameters are ready, you'll initialize MLForecast and fit it to the time series data.
+
+The model and params variables from the previous exercise are available, along with the ts DataFrame.
+
+This exercise is part of the course
+
+Designing Forecasting Pipelines for Production
+Exercise instructions
+
+Create an MLForecast instance named mlf.
+Set the freq, lags, and date_features arguments 
+using the respective keys from the params dictionary.
+
+Fit the model to the ts DataFrame.
+Hands-on interactive exercise
+Have a go at this exercise by completing this sample code.
+
+# Create an MLForecast instance
+mlf = ____(
+    # Set the freq, lags, and date_features arguments
+  	models=model,
+    freq=params["____"],
+    lags=params["____"],
+    date_features=params["____"]
+)
+
+# Fit mlf to the time series data
+mlf.fit(____)

@@ -1,14 +1,18 @@
 services:
   - type: web
-    name: flask-plotly-visualizer
+    name: flask-plot
     env: docker
-    repo: https://github.com/stick35em10/designing_forecasting_pipelines_for_production
-    branch: main
-    rootDir: flask_app
-    healthCheckPath: /
+    repo: https://github.com/your-username/your-repo-name # Replace with your GitHub repo
+    region: oregon
     plan: free
+    branch: chapter-3-Setting-Automation
+    healthCheckPath: /
+    dockerfilePath: ./flask_app/Dockerfile
+    rootDir: flask_app
+    startCommand: gunicorn --bind 0.0.0.0:80 app:app
     envVars:
       - key: FLASK_APP
         value: app.py
       - key: FLASK_ENV
         value: production
+

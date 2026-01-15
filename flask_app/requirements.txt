@@ -1,5 +1,12 @@
-Flask
-pandas
+flask
+lightgbm
+xgboost
+scikit-learn
 numpy
+statsmodels
+mlforecast==0.9.0
+utilsforecast
+pandas
 plotly
 gunicorn
+matplotlib

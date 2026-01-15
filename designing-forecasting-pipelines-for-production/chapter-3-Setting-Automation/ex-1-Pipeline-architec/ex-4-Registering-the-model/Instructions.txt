@@ -1,0 +1,35 @@
+Registering the model
+The final step is to register and log the fitted model using MLflow. This allows you to track and version your models for production deployment.
+
+The datetime, mlflow, mlforecast.flavor packages, and the fitted mlf model are preloaded for you.
+
+This exercise is part of the course
+
+Designing Forecasting Pipelines for Production
+Exercise instructions
+Set the run_name using the current timestamp created for you in the run_time variable.
+
+Use mlflow.start_run() to start a run with the specified experiment ID.
+
+Log the model using the right method.
+Hands-on interactive exercise
+Have a go at this exercise by completing this sample code.
+
+experiment_name = "ml_forecast"
+try:
+    mlflow.create_experiment(name=experiment_name)
+    meta = mlflow.get_experiment_by_name(experiment_name)
+    print(f"Setting a new experiment {experiment_name}")
+except:
+    print(f"Experiment {experiment_name} exists, pulling the metadata")
+    meta = mlflow.get_experiment_by_name(experiment_name)
+
+# Setup the run name and time
+run_time = datetime.datetime.now().strftime("%Y-%m-%d %H-%M-%S")
+run_name = f"lightGBM6_{____}"
+
+# Start the run
+with mlflow.____(experiment_id=meta.experiment_id, run_name=run_name) as run:
+    # Log the model
+    mlforecast.flavor.____(model=mlf, artifact_path="prod_model")
+    print(f"MLflow Run created - Name: {run_name}, ID: {run.info.run_id}")
