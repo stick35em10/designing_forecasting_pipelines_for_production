@@ -67,8 +67,10 @@ def generate_forecast():
 
     print("Saving plot to HTML...")
     # Save the plot to an HTML file
-    fig.write_html("templates/plot.html")
-    print("Plot saved to templates/plot.html.")
+    plot_div = pio.to_html(fig, full_html=False, include_plotlyjs='cdn')
+    with open("templates/plot_div.html", "w") as f:
+        f.write(plot_div)
+    print("Plot saved to templates/plot_div.html.")
 
 if __name__ == '__main__':
     generate_forecast()
